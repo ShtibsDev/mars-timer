@@ -1,0 +1,50 @@
+@import './style.scss';
+
+.CallToAction {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+
+	@media screen and (max-width: $breaking-point) {
+		flex-direction: column;
+	}
+
+	h1 {
+		color: #96c5fd;
+		font-size: 2rem;
+		margin: 0;
+	}
+
+	p {
+		max-width: 350px;
+		margin: 0;
+
+		@media screen and (max-width: $breaking-point) {
+			text-align: center;
+			margin: auto;
+		}
+	}
+}
+
+.Countdown {
+	header {
+		padding-bottom: 0;
+	}
+
+	.Timers {
+		display: grid;
+		width: fit-content;
+		gap: 1.5rem;
+		padding: 1.5rem 0;
+		margin: auto;
+
+		@media screen and (min-width: calc($breaking-point + 1px)) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media screen and (max-width: $breaking-point) {
+			grid-template-rows: repeat(3, 1fr);
+		}
+	}
+}
+

@@ -1,0 +1,38 @@
+$breaking-point: 950px;
+
+@font-face {
+	font-family: pattaya;
+	src: url(./assets/fonts/Pattaya-Regular.ttf);
+}
+
+html,
+body,
+#root {
+	width: 100%;
+	height: 100%;
+	font-family: pattaya;
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+}
+
+header {
+	text-align: center;
+	padding: 1.5rem;
+}
+
+body {
+	background: url(./assets/images/background.svg) center center;
+	background-size: 100% auto;
+
+	@media only screen and (max-width: $breaking-point) {
+		background-size: auto 100%;
+	}
+}
+
+.swal2-confirm.swal2-styled {
+	font-family: pattaya;
+	background-color: #96c5fd;
+}
+
