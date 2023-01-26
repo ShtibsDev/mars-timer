@@ -35,7 +35,7 @@
 	color: inherit;
 	cursor: pointer;
 	border: none;
-	background-color: rgb(236, 63, 63);
+	background-color: #ec3f3f;
 	text-align: center;
 	padding: 0.5rem;
 	border-radius: 5px;
@@ -43,7 +43,7 @@
 	transition: background-color 250ms ease-in-out;
 
 	&:hover {
-		background-color: rgb(184, 54, 54);
+		background-color: #b83636;
 	}
 }
 
