@@ -13,13 +13,16 @@ export default function useTimer(timerId, secondsToWait) {
 	useEffect(() => {
 		let intervalId;
 
-		const stopTimer = () => {
+		if (seconds <= 0) stopTimer();
+		else setTimer();
+
+		function stopTimer() {
 			Swal.fire('You missed the last rocket to mars!');
 			clearInterval(intervalId);
 			setSeconds(0);
-		};
+		}
 
-		const setTimer = () => {
+		function setTimer() {
 			intervalId = setInterval(() => {
 				setSeconds((sec) => {
 					const newSec = sec - 1;
@@ -27,10 +30,7 @@ export default function useTimer(timerId, secondsToWait) {
 					return newSec;
 				});
 			}, 1000);
-		};
-
-		if (seconds <= 0) stopTimer();
-		else setTimer();
+		}
 
 		return () => clearInterval(intervalId);
 	}, [seconds]);
